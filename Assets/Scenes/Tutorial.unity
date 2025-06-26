@@ -191,8 +191,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 27925876}
+  - component: {fileID: 27925878}
+  - component: {fileID: 27925877}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: IntroZoneTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,12 +209,49 @@ Transform:
   m_GameObject: {fileID: 27925875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -11.32, y: 2.71, z: 18.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27925877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27925875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c096081f22ad84fb50540fa8b1c76a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButton: {fileID: 8855051663887874141, guid: b7738abef2e547649b451d318ff4905b, type: 3}
+  canvasToActivate: {fileID: 387520477}
+  targetMessageList: {fileID: 2077492797}
+  otherCanvasesToDisable: []
+--- !u!65 &27925878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27925875}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &97819120
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102310544}
   - component: {fileID: 102310543}
+  - component: {fileID: 102310545}
   m_Layer: 0
   m_Name: EndZoneTrigger
   m_TagString: Untagged
@@ -322,7 +362,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -343,6 +383,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -23.523, z: 0}
+--- !u!114 &102310545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102310542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c096081f22ad84fb50540fa8b1c76a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButton: {fileID: 0}
+  canvasToActivate: {fileID: 0}
+  targetMessageList: {fileID: 0}
+  otherCanvasesToDisable: []
 --- !u!1001 &112443074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,6 +920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384191806}
   - component: {fileID: 384191805}
+  - component: {fileID: 384191807}
   m_Layer: 0
   m_Name: QuestionmarkTrigger
   m_TagString: Untagged
@@ -907,6 +964,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384191807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384191804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c096081f22ad84fb50540fa8b1c76a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputButton: {fileID: 8855051663887874141, guid: b7738abef2e547649b451d318ff4905b, type: 3}
+  canvasToActivate: {fileID: 316510437}
+  targetMessageList: {fileID: 1193187221}
+  otherCanvasesToDisable: []
 --- !u!1 &387520477
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +1028,7 @@ GameObject:
   - component: {fileID: 389683419}
   m_Layer: 0
   m_Name: XR Origin (VR)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13641,6 +13714,7 @@ SceneRoots:
   - {fileID: 874694228}
   - {fileID: 389683418}
   - {fileID: 1223684064236679288}
+  - {fileID: 27925876}
   - {fileID: 384191806}
   - {fileID: 102310544}
   - {fileID: 387520478}
@@ -13649,5 +13723,4 @@ SceneRoots:
   - {fileID: 2077492798}
   - {fileID: 1193187220}
   - {fileID: 451756253}
-  - {fileID: 27925876}
   - {fileID: 978335262}
